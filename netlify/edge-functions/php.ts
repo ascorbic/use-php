@@ -1,8 +1,8 @@
 import { PhpWorker } from "https://esm.sh/v90/php-wasm@0.0.5/PhpWorker.js";
-import { code } from "../../bootstrap.ts";
+import { bootstrapCode } from "../../bootstrap.ts";
 export default async function handler(request: Request) {
   try {
-    (globalThis as any).location = { href: request.url };
+    globalThis.location = { href: request.url } as Location;
     const { pathname } = new URL(request.url);
     if (pathname === "/favicon.ico") {
       return;
@@ -15,7 +15,7 @@ export default async function handler(request: Request) {
     });
     return new Promise((resolve) => {
       php.addEventListener("ready", async () => {
-        await php.run(code(pathname, request.method));
+        await php.run(bootstrapCode(pathname, request.method));
         await php.run(`<?php phpinfo();`);
         resolve(
           new Response(buff.join("\n"), {

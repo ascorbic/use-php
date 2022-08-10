@@ -1,4 +1,10 @@
-export const code = (path = '/', method = 'GET', _GET = {}, _POST = {}) => /* php */`<?php
+export const bootstrapCode = (
+  path = "/",
+  method = "GET",
+  _GET = {},
+  _POST = {},
+) =>
+  /* php */ `<?php
 ini_set('session.save_path', '/home/web_user');
 $stdErr = fopen('php://stderr', 'w');
 $errors = [];
@@ -17,7 +23,7 @@ set_error_handler(function(...$args) use($stdErr, &$errors){
 	fwrite($stdErr, json_encode($args, JSON_PRETTY_PRINT) . "\n" );
 });
 $request = (object) json_decode(
-	'${ JSON.stringify({path, method, _GET, _POST}) }'
+	'${JSON.stringify({ path, method, _GET, _POST })}'
 	, JSON_OBJECT_AS_ARRAY
 );
 parse_str(substr($request->_GET, 1), $_GET);
@@ -39,4 +45,4 @@ $_SERVER['PHP_SELF']        = $docroot . '/' . $script;
 $_SERVER['DOCUMENT_ROOT']   = '/';
 $_SERVER['HTTPS']           = '';
 chdir($docroot);
-`
+`;
