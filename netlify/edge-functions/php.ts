@@ -4,6 +4,9 @@ export default async function handler(request: Request) {
   try {
     (globalThis as any).location = { href: request.url };
     const { pathname } = new URL(request.url);
+    if (pathname === "/favicon.ico") {
+      return;
+    }
     const buff: string[] = [];
     const php = await new PhpWorker({
       print: (...args: string[]) => buff.push(...args),
