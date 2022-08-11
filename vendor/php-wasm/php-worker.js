@@ -559,7 +559,7 @@ var j = J((exports, module) => {
           ? e.startsWith(r)
           : e.indexOf(r) === 0;
       }
-      var dataURIPrefix = "data:application/octet-stream;base64,";
+      var dataURIPrefix = "data:application/";
       function isDataURI(e) {
         return hasPrefix(e, dataURIPrefix);
       }

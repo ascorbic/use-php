@@ -1,4 +1,5 @@
 import { PhpWorker } from "../../vendor/php-wasm/PhpWorker.js";
+import wasmData from "../../vendor/php-wasm/php-worker.wasm.js";
 import { bootstrapCode } from "../../bootstrap.ts";
 export default async function handler(request: Request) {
   try {
@@ -11,7 +12,7 @@ export default async function handler(request: Request) {
     const php = await new PhpWorker({
       print: (...args: string[]) => buff.push(...args),
       printErr: (...args: string[]) => console.warn("warn", ...args),
-      locateFile: () => "https://unpkg.com/php-wasm@0.0.5/php-worker.wasm",
+      locateFile: () => wasmData,
     });
     return new Promise((resolve) => {
       php.addEventListener("ready", async () => {
