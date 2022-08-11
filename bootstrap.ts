@@ -29,11 +29,11 @@ $request = (object) json_decode(
 parse_str(substr($request->_GET, 1), $_GET);
 $_POST = $request->_POST;
 $origin  = 'http://localhost:3333';
-$docroot = '/preload/drupal-7.59';
+$docroot = '/';
 $script  = 'index.php';
 $path = $request->path;
 $path = preg_replace('/^\\/php-wasm/', '', $path);
-$_SERVER['SERVER_SOFTWARE'] = 'deno';
+$_SERVER['SERVER_SOFTWARE'] = 'Netlify Edge Functions';
 $_SERVER['REQUEST_URI']     = $path;
 $_SERVER['REMOTE_ADDR']     = '127.0.0.1';
 $_SERVER['SERVER_NAME']     = $origin;

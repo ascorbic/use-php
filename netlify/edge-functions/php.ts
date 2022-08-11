@@ -1,4 +1,4 @@
-import { PhpWorker } from "https://esm.sh/v90/php-wasm@0.0.5/PhpWorker.js";
+import { PhpWorker } from "../../vendor/php-wasm/PhpWorker.js";
 import { bootstrapCode } from "../../bootstrap.ts";
 export default async function handler(request: Request) {
   try {
