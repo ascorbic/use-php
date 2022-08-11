@@ -2,6 +2,8 @@
 
 This is an example of running PHP in a Netlify Edge Function using WebAssembly. It uses [php-wasm](https://github.com/seanmorris/php-wasm), which is a WebAssembly build of PHP.
 
+## [View the demo](https://php-edge.netlify.app/)
+
 The interesting code is [here](https://github.com/ascorbic/php-edge/blob/main/netlify/edge-functions/php.ts).
 
 Try it yourself: 
