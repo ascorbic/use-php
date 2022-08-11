@@ -1,10 +1,11 @@
 import { PhpWorker } from "../../vendor/php-wasm/PhpWorker.js";
 import wasmData from "../../vendor/php-wasm/php-worker.wasm.js";
-import { bootstrapCode } from "../../bootstrap.ts";
+import { bootstrapCode } from "../bootstrap.ts";
 export default async function handler(request: Request) {
   try {
     //  emscripten expects workers to have window.location available
-    globalThis.location = { href: request.url } as Location;
+    globalThis.location ||= { href: request.url } as Location;
+
     const { pathname } = new URL(request.url);
 
     // an example of serving static content
@@ -12,7 +13,6 @@ export default async function handler(request: Request) {
       return;
     }
     const buff: string[] = [];
-    const headers = new Headers();
     const php = await new PhpWorker({
       // we could use a stream instead here
       print: (...args: string[]) => buff.push(...args),

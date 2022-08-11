@@ -1,0 +1,1 @@
+This is vendored from esm.sh/php-wasm, with a single change: an `eval()` is removed, which was breaking bundling
