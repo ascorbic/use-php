@@ -48,7 +48,7 @@ export const config = {
 
 ### `usePHP(request: Request, renderer?: JSXRenderer)`
 
-Pass in the request object and an optional JSX renderer and it will return a JSX element. If you omit the renderer it will return an HTML string instead.
+Pass in the request object and an optional JSX renderer and it will return tagged template that you can use to execute PHP. If you pass a JSX render function to the hook (e.g. `h` or `React.createElement`), then the template will return a JSX element. If you omit the renderer it will return an HTML string instead.
 
 Try it yourself:
 
