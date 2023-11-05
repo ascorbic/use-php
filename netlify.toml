@@ -1,7 +1,2 @@
 [build]
 publish = "public"
-
-# Serve everything from the edge function
-[[edge_functions]]
-path = "/*"
-function = "php"
