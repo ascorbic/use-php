@@ -52,6 +52,13 @@ Try it yourself:
 
 [![deploy to netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ascorbic/php-edge)
 
+## FAQ
+
+- **Why?**
+  - Why not? That Lambo won't buy itself.
+- **How can I deploy this to production?**
+  - 🤦🏻‍♂️ 
+
 ### LICENCE
 
 MIT Licence. © 2023 [Matt Kane](https://github.com/ascorbic)
