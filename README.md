@@ -6,6 +6,8 @@ It runs in a Netlify Edge Function and uses [php-wasm](https://github.com/seanmo
 
 **[View the demo](https://php-edge.netlify.app/)**
 
+[![deploy to netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ascorbic/use-php)
+
 ### Usage
 
 ```tsx filename=netlify/edge-functions/php.tsx
@@ -50,7 +52,7 @@ Pass in the request object and an optional JSX renderer and it will return a JSX
 
 Try it yourself:
 
-[![deploy to netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ascorbic/php-edge)
+[![deploy to netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ascorbic/use-php)
 
 ## FAQ
 
