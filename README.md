@@ -1,3 +1,5 @@
+![A professional studio photograph of a blue Lamborghini on a plain white background. The front license plate reads "usephp"](https://github.com/ascorbic/use-php/assets/213306/94af283a-4d5c-4eb5-99ee-7bb62d4a56b7)
+
 # 🏎️ usePHP 💨
 
 A React hook for running PHP? Why not?
