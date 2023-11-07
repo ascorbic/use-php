@@ -1,0 +1,10 @@
+{
+    "tasks": {
+        "serve": "deno run server.tsx"
+    },
+    "compilerOptions": {
+        "jsx": "react",
+        "jsxFactory": "h",
+        "noImplicitAny": false
+    }
+}

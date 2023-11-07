@@ -4,5 +4,6 @@
   "deno.importMap": ".netlify/edge-functions-import-map.json",
   "[typescript]": {
     "editor.defaultFormatter": "denoland.vscode-deno"
-  }
+  },
+  "deno.lint": true
 }
